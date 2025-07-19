@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Surprize de Dragoste</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            text-align: center;
+            padding: 30px;
+        }
+        h1 {
+            color: #fff;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px #00000055;
+        }
+        .envelope-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .envelope {
+            width: 160px;
+            height: 100px;
+            background-color: #fff0f5;
+            border: 2px solid #ff6f91;
+            border-radius: 8px;
+            cursor: pointer;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .envelope:hover {
+            transform: scale(1.05);
+        }
+        .message {
+            display: none;
+            padding: 15px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fffafc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            color: #b30059;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .heart {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 20px;
+            color: #ff4d6d;
+        }
+    </style>
+</head>
+<body>
+    <h1>💌 6 Plicuri cu Surprize pentru Dragostea Mea 💌</h1>
+    <div class="envelope-container">
+        <div class="envelope" onclick="toggleMessage(this)">
+            <div class="message">Ai câștigat o excursie pe Transalpina!</div>
+            <div class="heart">❤️</div>
+        </div>
+        <div class="envelope" onclick="toggleMessage(this)">
+            <div class="message">Ai câștigat o excursie pe Transfăgărășan!</div>
+            <div class="heart">💖</div>
+        </div>
+        <div class="envelope" onclick="toggleMessage(this)">
+            <div class="message">Ai câștigat o excursie la mare în Bulgaria!</div>
+            <div class="heart">💘</div>
+        </div>
+        <div class="envelope" onclick="toggleMessage(this)">
+            <div class="message">Ai câștigat o excursie la statuia lui Decebal!</div>
+            <div class="heart">💕</div>
+        </div>
+        <div class="envelope" onclick="toggleMessage(this)">
+            <div class="message">Ai câștigat JACKPOT - Excursie Transfăgărășan + Transalpina + Statuia Decebal!</div>
+            <div class="heart">💝</div>
+        </div>
+        <div class="envelope" onclick="toggleMessage(this)">
+            <div class="message">Te iubesc infinit. Asta e cea mai mare excursie a vieții mele. 💑</div>
+            <div class="heart">💞</div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMessage(el) {
+            const msg = el.querySelector('.message');
+            msg.style.display = msg.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
